@@ -1,7 +1,5 @@
 import { useState } from 'react'
 
-
-
 const AddTask = ({onAdd}) => {
     const [text, setText] = useState('')
     const [day, setDay] = useState('')
@@ -33,7 +31,7 @@ const AddTask = ({onAdd}) => {
             </div>
             <div className='form-control'>
                 <label>Day & Time</label>
-                <input type='text' placeholder='Add Day & Tim' 
+                <input type='text' placeholder='Add Day & Time' 
                 value={day}
                 onChange={(e) => setDay(e.target.value)}
                 />
@@ -42,6 +40,7 @@ const AddTask = ({onAdd}) => {
                 <label>Set Reminder</label>
                 <input 
                     type='checkbox' 
+                    checked={reminder}
                     value={reminder}
                     onChange={(e) => setReminder(e.currentTarget.checked)}
                 />
